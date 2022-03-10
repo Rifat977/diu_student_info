@@ -2,7 +2,7 @@ import HomePage from "./components/HomePage"
 import Student from "./components/StudentPage"
 import Cgpa from "./components/CgpaPage"
 // import Detail from "./components/CgpaDetail"
-import {createRouter, createWebHashHistory} from 'vue-router'
+import {createRouter, createWebHistory} from 'vue-router'
 
 const routes =[
     {
@@ -23,7 +23,7 @@ const routes =[
 ]
 
 const router = createRouter({
-    history: createWebHashHistory('configure-admin'),
+    history: createWebHistory(),
     routes
 });
 
