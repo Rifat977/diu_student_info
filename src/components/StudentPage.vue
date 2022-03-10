@@ -288,7 +288,7 @@ export default {
        loadInfo(){
        let studentId = this.$route.params.studentId;
        var self = this
-        axios.get('https://software.diu.edu.bd:8189/result/studentInfo?', {
+        axios.get('http://software.diu.edu.bd:8189/result/studentInfo?', {
           params: {
               studentId: studentId,
           }
