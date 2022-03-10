@@ -6,7 +6,7 @@
 
           <div class="card">
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-              <img src="template/assets/img/profile.png" alt="Profile" class="rounded-circle">
+              <img src="/template/assets/img/profile.png" alt="Profile" class="rounded-circle">
               <h2>{{info.studentName}}</h2>
               <h3>{{info.progShortName}}</h3>
               <h3>{{info.studentId}}</h3>
