@@ -119,11 +119,7 @@ export default{
     mounted(){
         var self = this
         let studentId = this.$route.params.studentId;
-        axios.get('http://software.diu.edu.bd:8189/result/studentInfo?', {
-          params: {
-              studentId: studentId,
-          }
-        })
+        axios.get('http://localhost:8000/studentId='+studentId)
         .then(function (response) {
             if(response.data.studentId==null){
               alert('You have not passed in any semester!')
@@ -131,7 +127,7 @@ export default{
               self.info = response.data
               self.semesterId = response.data.semesterId;
               self.semesterYear = self.semesterId / 10;   
-              axios.get('http://software.diu.edu.bd:8189/result?grecaptcha=&semesterId='+ self.info.semesterId +'&studentId='+self.info.studentId)
+              axios.get('http://localhost:8000/studentId='+ self.info.studentId +'/semesterId='+self.info.semesterId)
               .then(function (res) {
               self.semester = res.data
               })
@@ -143,25 +139,11 @@ export default{
         .catch(function (error) {
             console.log(error);
          })
-
-         function sem2(year) {
-            return axios.get('http://software.diu.edu.bd:8189/result?grecaptcha=&semesterId='+ year+''+2 +'&studentId='+studentId);
-          }
-
-          function sem3() {
-            return axios.get('http://software.diu.edu.bd:8189/result?grecaptcha=&semesterId='+ self.info.semesterId +'&studentId='+studentId);
-          }
-
-          Promise.all([sem2(parseInt(this.semesterYear)), sem3()])
-            .then(function (results) {
-              const sem2 = results[0];
-              console.log(sem2)
-            });
     },
     methods: {
       viewCgpa(id){
         var self = this
-        axios.get('http://software.diu.edu.bd:8189/result?grecaptcha=&semesterId='+ id +'&studentId='+this.info.studentId)
+              axios.get('http://localhost:8000/studentId='+ id +'/semesterId='+self.info.studentId)
             .then(function (res) {
             self.semester = res.data
             })
