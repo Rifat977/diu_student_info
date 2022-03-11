@@ -288,7 +288,7 @@ export default {
        loadInfo(){
        let studentId = this.$route.params.studentId;
        var self = this
-        axios.get('http://diu-api.herokuapp.com/studentId='+studentId, {
+        axios.get('https://diu-api.herokuapp.com/studentId='+studentId, {
           headers: {
             'Content-Type' : 'application/x-www-form-urlencoded',
             'Access-Control-Allow-Origin': '*',
