@@ -290,8 +290,8 @@ export default {
        var self = this
         axios.get('https://diu-api.herokuapp.com/studentId='+studentId, {
           headers: {
-            'Content-Type' : 'application/x-www-form-urlencoded',
             'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Headers' : 'Origin, X-Requested-with, Content-Type, Accept',
           }
         })
         .then(function (response) {
