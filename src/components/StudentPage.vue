@@ -288,7 +288,11 @@ export default {
        loadInfo(){
        let studentId = this.$route.params.studentId;
        var self = this
-        axios.get('https://diu-api.herokuapp.com/studentId='+studentId)
+        axios.get('https://diu-api.herokuapp.com/studentId='+studentId, {
+          headers: {
+            'Content-Type' : 'application/json'
+          }
+        })
         .then(function (response) {
             if(response.data.studentId==null){
               alert('Sorry, wrong id!')
