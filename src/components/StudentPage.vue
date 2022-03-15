@@ -14,7 +14,7 @@
             </div>
           </div>
 
-          <router-link to="/" class="btn btn-success btn-sm mt-3">Back to Home</router-link>
+          <router-link to="/" class="btn btn-success btn-sm mb-2">Back to Home</router-link>
 
         </div>
 

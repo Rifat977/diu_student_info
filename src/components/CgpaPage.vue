@@ -13,7 +13,7 @@
             </div>
           </div>
 
-           <router-link to="/" class="btn btn-success btn-sm mt-3">Back to Home</router-link>
+           <router-link to="/" class="btn btn-success btn-sm mb-2">Back to Home</router-link>
 
         </div>
 
@@ -73,24 +73,24 @@
                   <h5 class="card-title">{{item.courseTitle}}</h5>
 
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Subject Code</div>
-                    <div class="col-lg-9 col-md-8">{{item.customCourseId}}</div>
+                    <div class="col-6 label ">Subject Code</div>
+                    <div class="col-6">{{item.customCourseId}}</div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">GPA</div>
-                    <div class="col-lg-9 col-md-8">{{item.pointEquivalent}}</div>
+                    <div class="col-6 label ">GPA</div>
+                    <div class="col-6">{{item.pointEquivalent}}</div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Grade</div>
-                    <div class="col-lg-9 col-md-8">{{item.gradeLetter}}</div>
+                    <div class="col-6 label ">Grade</div>
+                    <div class="col-6">{{item.gradeLetter}}</div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Semester GPA</div>
-                    <div class="col-lg-9 col-md-8">{{item.cgpa}}</div>
+                    <div class="col-6 label ">Semester GPA</div>
+                    <div class="col-6">{{item.cgpa}}</div>
                   </div>
                   <div class="row">
-                    <div class="col-lg-3 col-md-4 label ">Credit</div>
-                    <div class="col-lg-9 col-md-8">{{item.totalCredit}}</div>
+                    <div class="col-6 label ">Credit</div>
+                    <div class="col-6">{{item.totalCredit}}</div>
                   </div>
 
                 </div>
