@@ -119,7 +119,7 @@ export default{
     mounted(){
         var self = this
         let studentId = this.$route.params.studentId;
-        axios.get('http://diu-api.herokuapp.com/studentId='+studentId)
+        axios.get('https://diu-api.herokuapp.com/studentId='+studentId)
         .then(function (response) {
             if(response.data.studentId==null){
               alert('You have not passed in any semester!')
@@ -127,7 +127,7 @@ export default{
               self.info = response.data
               self.semesterId = response.data.semesterId;
               self.semesterYear = self.semesterId / 10;   
-              axios.get('http://diu-api.herokuapp.com/studentId='+ self.info.studentId +'/semesterId='+self.info.semesterId)
+              axios.get('https://diu-api.herokuapp.com/studentId='+ self.info.studentId +'/semesterId='+self.info.semesterId)
               .then(function (res) {
               self.semester = res.data
               })
@@ -143,7 +143,7 @@ export default{
     methods: {
       viewCgpa(id){
         var self = this
-              axios.get('http://diu-api.herokuapp.com/studentId='+ id +'/semesterId='+self.info.studentId)
+              axios.get('https://diu-api.herokuapp.com/studentId='+ id +'/semesterId='+self.info.studentId)
             .then(function (res) {
             self.semester = res.data
             })
