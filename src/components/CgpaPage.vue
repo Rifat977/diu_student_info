@@ -9,10 +9,11 @@
               <img src="/template/assets/img/profile.png" alt="Profile" class="rounded-circle">
               <h2>{{info.studentName}}</h2>
               <h3>{{info.progShortName}}</h3>
-              <h3>{{info.studentId}}</h3>
-              <router-link to="/" class="btn btn-success btn-sm mt-3">Back..</router-link>
+              <h3>ID: {{info.studentId}}</h3>
             </div>
           </div>
+
+           <router-link to="/" class="btn btn-success btn-sm mt-3">Back to Home</router-link>
 
         </div>
 
@@ -66,7 +67,7 @@
 
               
               <div v-if="semester.length<1">
-                  <h6 class="card-title text-danger">You have not pass this semester</h6>
+                  <h6 class="card-title text-danger">Not pass this semester</h6>
               </div>
               <div v-else v-for="item in semester" :key="item.courseId" class="tab-pane fade show active">
                   <h5 class="card-title">{{item.courseTitle}}</h5>

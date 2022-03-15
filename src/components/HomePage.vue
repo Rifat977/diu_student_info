@@ -8,7 +8,7 @@
 
               <div class="d-flex justify-content-center py-4">
                 <a href="/" class="logo d-flex align-items-center w-auto">
-                  <span class="d-lg-block">Smart Daffodil</span>
+                  <span class="d-lg-block">DIU Student</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -30,7 +30,7 @@
                       <input type="number" v-model="departmentId" placeholder="35" class="form-control" required>
                     </div>
                     <div class="col-4">
-                      <input type="number" v-model="studentId" placeholder="909" class="form-control" required>
+                      <input type="number" v-model="studentId" placeholder="000" class="form-control" required>
                     </div>
 
                     <div class="col-12 mt-4">
