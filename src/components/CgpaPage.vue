@@ -143,7 +143,7 @@ export default{
     methods: {
       viewCgpa(id){
         var self = this
-              axios.get('https://diu-api.herokuapp.com/studentId='+ id +'/semesterId='+self.info.studentId)
+              axios.get('https://diu-api.herokuapp.com/studentId='+ self.info.studentId +'/semesterId='+id)
             .then(function (res) {
             self.semester = res.data
             })
